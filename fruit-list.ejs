@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>how to fetch data from database in node js and display in html</title>
+</head>
+<body>
+<div>
+    <label>Fruit Name: </label>
+    <select name="select" id="select1">
+        <option value="none" selected disabled hidden>Select fruit</option>
+        <% for (const i in data) { %>
+            <option value="<%= data[i].fruit_id %>"> <%= data[i].fruit_name%> </option>
+        <% } %>
+    </select>
+    <label for="fprice">Per Fruit Price::</label>
+    <input type="text" id="fprice" name="fprice"><br><br>
+    <label for="fquantity">Quantity</label>
+    <input type="text" id="fquantity" name="fquantity"><br><br>
+    <label for="ftotalprice">Total Price</label>
+    <input type="text" id="ftotalprice" name="ftotalprice"><br><br>
+</div>
+</body>
+</html>
